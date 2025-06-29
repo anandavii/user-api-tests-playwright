@@ -1,0 +1,23 @@
+{
+  "name": "user-api-tests-playwright",
+  "version": "1.0.0",
+  "description": "This is a api testing framework",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anandavii/user-api-tests-playwright.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/anandavii/user-api-tests-playwright/issues"
+  },
+  "homepage": "https://github.com/anandavii/user-api-tests-playwright#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.53.1",
+    "@types/node": "^24.0.7"
+  }
+}
