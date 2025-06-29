@@ -48,7 +48,7 @@ test('POST - Test Failed Login', async ({ request }) => {
 })
 
 test('POST - Successful Registration', async ({ request }) => {
-    const response = await request.post(`${baseUrl}/api/register}`, {
+    const response = await request.post(`${baseUrl}/api/register`, {
         headers: {
             'x-api-key': 'reqres-free-v1',
         },
