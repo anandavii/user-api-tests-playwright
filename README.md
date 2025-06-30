@@ -2,28 +2,37 @@
 
 [![Playwright](https://img.shields.io/badge/Playwright-JS-green?logo=playwright&logoColor=white)](https://playwright.dev/)
 ![Node.js version](https://img.shields.io/badge/Node.js->=18-blue)
-[![Build Status](https://github.com/anandavii/employeeMgmtAutoamtion/actions/workflows/playwright.yml/badge.svg)](https://github.com/anandavii/employeeMgmtAutoamtion/actions/workflows/playwright.yml)
-![Last commit](https://img.shields.io/github/last-commit/anandavii/employeeMgmtAutoamtion)
+[![Build Status](https://github.com/anandavii/user-api-tests-playwright/actions/workflows/playwright.yml/badge.svg)](https://github.com/anandavii/user-api-tests-playwright/actions/workflows/playwright.yml)
+![Last commit](https://img.shields.io/github/last-commit/anandavii/user-api-tests-playwright)
 
 ## Overview
 
-This is a Playwright-based API Test Automation Framework built using JavaScript. It is designed to validate REST API endpoints from the Reqres.in API, covering critical CRUD operations and authentication scenarios. The project aims to provide a strong foundation for learning API test automation using Playwright's request context.
+This is a Playwright-based API Test Automation Framework built using JavaScript. It is designed to validate REST API endpoints from the Reqres.in API, covering full CRUD operations and authentication workflows. The project demonstrates how to perform API testing using Playwright's request context and is suitable for both learning and showcasing in portfolios.
 
 ### Goals of this Framework
 
-- Automate key API workflows using Playwright’s request context
-- Validate request-response status codes and response payloads
-- Establish a base structure for scalable API test development
-- Integrate basic positive and negative test validations
+- Automate key API workflows using Playwright’s request fixture
+- Validate HTTP methods: GET, POST, PUT, DELETE
+- Cover positive and negative test validations
+- Ensure readable, reusable and scalable test code
+- Prepare a CI-ready, beginner-friendly automation project
 
 ## What’s Implemented So Far
 
-- **GET Requests**: Validates user detail retrieval with status and field assertions.
-- **POST Requests**:
-  - Create new user
-  - Successful login
-  - Failed login (missing password)
-  - Registration attempt (under fix)
+- **GET Requests**  
+  Validates user detail retrieval with status and field-level checks
+
+- **POST Requests**  
+  - Create new user  
+  - Successful login  
+  - Failed login (missing password)  
+  - Successful registration
+
+- **PUT Requests**  
+  - Update user name and job, validate response and timestamp
+
+- **DELETE Requests**  
+  - Delete user and assert status code 204 (No Content)
 
 ## Usage
 
@@ -39,25 +48,19 @@ This is a Playwright-based API Test Automation Framework built using JavaScript.
 ## Project Details
 
 - Framework: Playwright (JavaScript)
-- Test Type: API Testing (using request fixture)
+- Test Type: API Testing (using request context)
 - Base API: https://reqres.in
-- Language: JavaScript (CommonJS style)
-- Test Runner: Playwright Test
-
-<!-- ## GitHub Actions CI
-
-This project uses GitHub Actions for automated test execution.
-
-- The GitHub Actions workflow is configured to run on each code push and pull request.
-- Supports manual triggering via GitHub’s Actions tab.
-- Ensures continuous feedback loop on changes. -->
+- Language: JavaScript (CommonJS)
+- Runner: Playwright Test
+- Reporting: Built-in HTML Reporter
 
 ## Next Steps
 
-- Fix registration endpoint issue and validate user creation.
-- Add test cases for PUT and DELETE operations.
-- Create a reusable request utility function for cleaner test code.
-- Integrate `.env` support for API base URLs and tokens.
-- Add Allure or HTML reporting for enhanced test visibility.
-- Expand data-driven testing using JSON files or fixtures.
+- Improve error handling and add edge case scenarios
+- Introduce reusable API utility functions for cleaner code
+- Add `.env` support for managing base URLs and tokens
+- Integrate GitHub Actions for CI-based test execution
+- Explore Allure Reporting for advanced test reports
+- Add dynamic data validation and schema checks
+- Create pre-test and post-test hooks using Playwright fixtures
 
