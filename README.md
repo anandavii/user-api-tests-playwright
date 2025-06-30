@@ -2,8 +2,8 @@
 
 [![Playwright](https://img.shields.io/badge/Playwright-JS-green?logo=playwright&logoColor=white)](https://playwright.dev/)
 ![Node.js version](https://img.shields.io/badge/Node.js->=18-blue)
-[![Build Status](https://github.com/anandavii/user-api-tests-playwright/actions/workflows/playwright.yml/badge.svg)](https://github.com/anandavii/user-api-tests-playwright/actions/workflows/playwright.yml)
-![Last commit](https://img.shields.io/github/last-commit/anandavii/user-api-tests-playwright)
+[![Build Status](https://github.com/anandavii/employeeMgmtAutoamtion/actions/workflows/playwright.yml/badge.svg)](https://github.com/anandavii/employeeMgmtAutoamtion/actions/workflows/playwright.yml)
+![Last commit](https://img.shields.io/github/last-commit/anandavii/employeeMgmtAutoamtion)
 
 ## Overview
 
