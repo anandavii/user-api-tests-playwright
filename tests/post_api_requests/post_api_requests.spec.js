@@ -1,10 +1,7 @@
 import { test, expect } from '@playwright/test'
-const baseUrl = 'https://reqres.in/api'
+
 test('POST - Create new user', async ({ request }) => {
-    const response = await request.post(`${baseUrl}/user`, {
-        headers: {
-            'x-api-key': 'reqres-free-v1',
-        },
+    const response = await request.post(`/api/user`, {
         data: {
             id: 1000,
         },
@@ -17,7 +14,7 @@ test('POST - Create new user', async ({ request }) => {
 })
 
 test('POST - Test Successful Login', async ({ request }) => {
-    const response = await request.post(`${baseUrl}/login`, {
+    const response = await request.post(`/api/login`, {
         headers: {
             'x-api-key': 'reqres-free-v1',
         },
@@ -33,7 +30,7 @@ test('POST - Test Successful Login', async ({ request }) => {
 })
 
 test('POST - Test Failed Login', async ({ request }) => {
-    const response = await request.post(`${baseUrl}/login`, {
+    const response = await request.post(`/api/login`, {
         headers: {
             'x-api-key': 'reqres-free-v1',
         },
@@ -48,7 +45,7 @@ test('POST - Test Failed Login', async ({ request }) => {
 })
 
 test('POST - Successful Registration', async ({ request }) => {
-    const response = await request.post(`${baseUrl}/api/register`, {
+    const response = await request.post(`/api/api/register`, {
         headers: {
             'x-api-key': 'reqres-free-v1',
         },

@@ -1,12 +1,8 @@
 import { test, expect } from '@playwright/test'
-const baseUrl = 'https://reqres.in/api'
 
 test('PUT - Sample PUT test', async ({ request }) => {
 
-    const response = await request.put(`${baseUrl}/users/2`, {
-        headers: {
-            'x-api-key': 'reqres-free-v1',
-        },
+    const response = await request.put(`/api/users/2`, {
         data: {
             name: 'new name',
             job: 'new job'

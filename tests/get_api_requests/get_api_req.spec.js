@@ -1,13 +1,7 @@
 import { test, expect } from '@playwright/test'
 
-const baseUrl = "https://reqres.in/api"
-
 test('GET - Get User Details', async ({ request }) => {
-    const response = await request.get(`${baseUrl}/users/2`, {
-        headers: {
-            'x-api-key': 'reqres-free-v1',
-        },
-    })
+    const response = await request.get(`/api/users/2`)
     const responseBody = JSON.parse(await response.text())
 
     expect(response.status()).toBe(200)
