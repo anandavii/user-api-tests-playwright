@@ -1,64 +1,63 @@
-# user-api-tests-playwright
+# User API Test Automation with Playwright
 
-This is a beginner-friendly API testing framework built using Playwright and JavaScript, designed to test REST APIs from Reqres.in. It demonstrates API automation for common HTTP methods like GET and POST, with proper status code and data validation using Playwright’s request context.
+[![Playwright](https://img.shields.io/badge/Playwright-JS-green?logo=playwright&logoColor=white)](https://playwright.dev/)
+![Node.js version](https://img.shields.io/badge/Node.js->=18-blue)
+[![Build Status](https://github.com/anandavii/employeeMgmtAutoamtion/actions/workflows/playwright.yml/badge.svg)](https://github.com/anandavii/employeeMgmtAutoamtion/actions/workflows/playwright.yml)
+![Last commit](https://img.shields.io/github/last-commit/anandavii/employeeMgmtAutoamtion)
 
-## Tech Stack
+## Overview
 
-- Playwright for API testing
-- JavaScript (ES6)
-- Node.js
-- Playwright Test Runner
-- HTML Reporter (built-in)
+This is a Playwright-based API Test Automation Framework built using JavaScript. It is designed to validate REST API endpoints from the Reqres.in API, covering critical CRUD operations and authentication scenarios. The project aims to provide a strong foundation for learning API test automation using Playwright's request context.
 
-## Folder Structure
+### Goals of this Framework
 
-user-api-tests-playwright/
-├── tests/
-│   ├── get_api_requests/
-│   │   └── get_api_req.spec.js
-│   └── post_api_requests/
-│       └── post_api_requests.spec.js
-├── playwright.config.js
-├── package.json
-└── README.md
+- Automate key API workflows using Playwright’s request context
+- Validate request-response status codes and response payloads
+- Establish a base structure for scalable API test development
+- Integrate basic positive and negative test validations
 
-## What is Covered
+## What’s Implemented So Far
 
-This project tests various API endpoints using Playwright's request fixture, including:
+- **GET Requests**: Validates user detail retrieval with status and field assertions.
+- **POST Requests**:
+  - Create new user
+  - Successful login
+  - Failed login (missing password)
+  - Registration attempt (under fix)
 
-GET Requests
-- Get user details with validations for id, name, email, and avatar
+## Usage
 
-POST Requests
-- Create new user
-- Successful login
-- Failed login (negative test)
-- Successful registration
+1. Install dependencies  
+   `npm install`
 
-## How to Install and Run
+2. Run all tests  
+   `npx playwright test`
 
-1. Clone this repository
+3. View the HTML report  
+   `npx playwright show-report`
 
-   git clone https://github.com/anandavii/user-api-tests-playwright.git
-   cd user-api-tests-playwright
+## Project Details
 
-2. Install dependencies
+- Framework: Playwright (JavaScript)
+- Test Type: API Testing (using request fixture)
+- Base API: https://reqres.in
+- Language: JavaScript (CommonJS style)
+- Test Runner: Playwright Test
 
-   npm install
+<!-- ## GitHub Actions CI
 
-3. Run all tests
+This project uses GitHub Actions for automated test execution.
 
-   npx playwright test
+- The GitHub Actions workflow is configured to run on each code push and pull request.
+- Supports manual triggering via GitHub’s Actions tab.
+- Ensures continuous feedback loop on changes. -->
 
-4. View HTML report
+## Next Steps
 
-   npx playwright show-report
-
-## Future Improvements
-
-- Add PUT and DELETE test cases
-- Add reusable request utility functions
-- Integrate data-driven testing from JSON files
-- Add environment config using dotenv
-- Setup GitHub Actions for continuous integration
+- Fix registration endpoint issue and validate user creation.
+- Add test cases for PUT and DELETE operations.
+- Create a reusable request utility function for cleaner test code.
+- Integrate `.env` support for API base URLs and tokens.
+- Add Allure or HTML reporting for enhanced test visibility.
+- Expand data-driven testing using JSON files or fixtures.
 
