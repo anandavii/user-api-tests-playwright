@@ -56,11 +56,9 @@ This is a Playwright-based API Test Automation Framework built using JavaScript.
 
 ## Next Steps
 
-- Improve error handling and add edge case scenarios
 - Introduce reusable API utility functions for cleaner code
 - Add `.env` support for managing base URLs and tokens
 - Integrate GitHub Actions for CI-based test execution
 - Explore Allure Reporting for advanced test reports
-- Add dynamic data validation and schema checks
-- Create pre-test and post-test hooks using Playwright fixtures
+
 
